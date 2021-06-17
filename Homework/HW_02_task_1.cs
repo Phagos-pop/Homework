@@ -7,6 +7,7 @@ namespace Homework
     {
         static void Main(string[] args)
         {
+            //
             StreamReader textReader = new StreamReader(@"C:\Users\Phagos\Desktop\image.txt", true);
             string textReaderResult = textReader.ReadToEnd();
             string[] arrayOfTextResult = textReaderResult.Split(' ');
