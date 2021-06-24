@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HW_04_task2", "HW_04\HW_04_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_04_task3", "HW_04\HW_04_task3\HW_04_task3.csproj", "{ADAE63EC-787C-4B24-A808-945FC909D838}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW_04_task4", "HW_04\HW_04_task_4\HW_04_task4.csproj", "{955BAEDB-F7DC-413D-AC7F-451DCC7450DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{ADAE63EC-787C-4B24-A808-945FC909D838}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADAE63EC-787C-4B24-A808-945FC909D838}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADAE63EC-787C-4B24-A808-945FC909D838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{955BAEDB-F7DC-413D-AC7F-451DCC7450DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955BAEDB-F7DC-413D-AC7F-451DCC7450DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955BAEDB-F7DC-413D-AC7F-451DCC7450DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955BAEDB-F7DC-413D-AC7F-451DCC7450DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
