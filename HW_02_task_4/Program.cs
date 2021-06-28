@@ -62,6 +62,7 @@ namespace HW_02_task_4
             Console.WriteLine(a14.GetType());
             System.String b14 = "1";
             Console.WriteLine(b14.GetType());
+            Console.ReadLine();
         }
     }
 }
