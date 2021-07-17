@@ -9,7 +9,7 @@ namespace HW_08_task1.Sersvises
 {
     static class ListDeveloper
     {
-        static List<DeveloperServise> Developers = new List<DeveloperServise>();
+        static List<IDeveloperServise> Developers = new List<IDeveloperServise>();
         static List<JuniorServise> JuniorDevelopers = new List<JuniorServise>();
         static List<MiddleServise> MiddleDevelopers = new List<MiddleServise>();
         static List<SeniorServise> SeniorDevelopers = new List<SeniorServise>();
@@ -58,27 +58,31 @@ namespace HW_08_task1.Sersvises
 
         public static void PrintAllDevelopers()
         {
-            Developers.AddRange(JuniorDevelopers);
+            Developers.AddRange(ArchitechDevelopers);
+            Developers.AddRange(TeamLeaderDevelopers);
             Developers.AddRange(SeniorDevelopers);
             Developers.AddRange(MiddleDevelopers);
-            Developers.AddRange(TeamLeaderDevelopers);
-            Developers.AddRange(ArchitechDevelopers);
+            Developers.AddRange(JuniorDevelopers);
+            
 
-            Developers = SortList(Developers).ToList<DeveloperServise>();
+            PrintList(Developers);
+        }
 
-            foreach (var i in Developers)
+        //static IOrderedEnumerable<IDeveloperServise> SortList(List<IDeveloperServise> sortDevelop)
+        //{
+        //    var sortedUsers = sortDevelop.OrderByDescending(u => u.Developer.Experience);
+        //    return sortedUsers;
+        //}
+
+        static void PrintList(List<IDeveloperServise> printDevelopers)
+        {
+            foreach (var i in printDevelopers)
             {
                 Console.WriteLine($"Company: {Company.CompanyName}, Full Name: {i.Developer.FirstName} {i.Developer.LastName}" +
                    $", Experience: {i.Developer.Experience}, Title: {i.Title},");
                 Console.WriteLine($"Salary:{i.Salary} , GitHub: {i.Developer.GitHub}");
             }
-            
-        }
 
-        static IOrderedEnumerable<DeveloperServise> SortList(List<DeveloperServise> Develop)
-        {
-            var sortedUsers = Develop.OrderByDescending(u => u.Developer.Experience);
-            return sortedUsers;
         }
 
     }

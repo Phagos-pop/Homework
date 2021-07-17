@@ -7,22 +7,13 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    abstract class DeveloperServise
+    interface IDeveloperServise
     {
-        public Developer Developer = new Developer();
-        public int Salary { get; private set; }
-        public string Title { get; private set; }
+        public Developer Developer { get; set; }
 
-        public DeveloperServise(string firstName, string lastName, int experience, string gitHub)
-        {
-            Developer.FirstName = firstName;
-            Developer.LastName = lastName;
-            Developer.Experience = experience;
-            Developer.GitHub = gitHub;
-            Developer.Responsibilities = SetResponsibilities();
-            Salary = CalculateSalary();
-            Title = SetTItle();
-        }
+        public int Salary { get; set; }
+
+        public string Title { get; set; }
 
         public abstract int CalculateSalary();
 
@@ -31,5 +22,5 @@ namespace HW_08_task1
         public abstract string[] SetResponsibilities();
 
     }
-    
+
 }

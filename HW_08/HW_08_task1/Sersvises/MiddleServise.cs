@@ -7,25 +7,36 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    sealed class MiddleServise : DeveloperServise
+    sealed class MiddleServise : IDeveloperServise
     {
 
-        public MiddleServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
+        public Developer Developer { get; set; }
+        public int Salary { get; set; }
+        public string Title { get; set; }
+
+        public MiddleServise(string firstName, string lastName, int experience, string gitHub)
         {
-            
+            Developer = new Developer();
+            Developer.FirstName = firstName;
+            Developer.LastName = lastName;
+            Developer.Experience = experience;
+            Developer.GitHub = gitHub;
+            Developer.Responsibilities = SetResponsibilities();
+            Salary = CalculateSalary();
+            Title = SetTItle();
         }
 
-        public override int CalculateSalary()
+        public int CalculateSalary()
         {
             return Company.BaseSalary * Company.MiddleCoefficient;
         }
 
-        public override string SetTItle()
+        public string SetTItle()
         {
             return "Middle";
         }
 
-        public override string[] SetResponsibilities()
+        public string[] SetResponsibilities()
         {
             return Responsibilities.MiddleResponsibilities;
         }
