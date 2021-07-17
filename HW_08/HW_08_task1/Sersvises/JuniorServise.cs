@@ -7,34 +7,25 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    class JuniorServise
+    class JuniorServise : DeveloperServise
     {
-        public Developer Developer = new Developer();
-        public int Salary { get; private set; }
-        public string Title { get; private set; }
 
-        public JuniorServise(string firstName, string lastName, int experience, string gitHub)
+        public JuniorServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
         {
-            Developer.FirstName = firstName;
-            Developer.LastName = lastName;
-            Developer.Experience = experience;
-            Developer.GitHub = gitHub;
-            Developer.Responsibilities = SetResponsibilities();
-            Salary = CalculateSalary();
-            Title = SetTItle();
+           
         }
 
-        protected virtual int CalculateSalary()
+        public override int CalculateSalary()
         {
             return Company.BaseSalary;
         }
 
-        protected virtual string SetTItle()
+        public override string SetTItle()
         {
             return "Junior";
         }
 
-        protected virtual string[] SetResponsibilities()
+        public override string[] SetResponsibilities()
         {
             return Responsibilities.JuniorResponsibilities;
         }

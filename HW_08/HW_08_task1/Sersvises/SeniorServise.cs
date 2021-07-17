@@ -7,7 +7,7 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    sealed class SeniorServise : JuniorServise
+    sealed class SeniorServise : DeveloperServise
     {
 
         public SeniorServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
@@ -15,17 +15,17 @@ namespace HW_08_task1
 
         }
 
-        protected override int CalculateSalary()
+        public override int CalculateSalary()
         {
             return Company.BaseSalary * Company.SeniorCoefficient + Company.SeniorPrize;
         }
 
-        protected override string SetTItle()
+        public override string SetTItle()
         {
             return "Senior";
         }
 
-        protected override string[] SetResponsibilities()
+        public override string[] SetResponsibilities()
         {
             return Responsibilities.SeniorResponsibilities;
         }

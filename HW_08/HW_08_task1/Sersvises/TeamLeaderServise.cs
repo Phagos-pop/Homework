@@ -7,7 +7,7 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    sealed class TeamLeaderServise : JuniorServise
+    sealed class TeamLeaderServise : DeveloperServise
     {
 
         public TeamLeaderServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
@@ -15,17 +15,17 @@ namespace HW_08_task1
 
         }
 
-        protected override int CalculateSalary()
+        public override int CalculateSalary()
         {
             return Company.BaseSalary * Company.TeamLeaderCoefficient + Company.TeamLeaderPrize ;
         }
 
-        protected override string SetTItle()
+        public override string SetTItle()
         {
             return "Team Leader";
         }
 
-        protected override string[] SetResponsibilities()
+        public override string[] SetResponsibilities()
         {
             return Responsibilities.TeamLeaderResponsibilities;
         }

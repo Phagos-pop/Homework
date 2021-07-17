@@ -7,7 +7,7 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    sealed class MiddleServise : JuniorServise
+    sealed class MiddleServise : DeveloperServise
     {
 
         public MiddleServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
@@ -15,17 +15,17 @@ namespace HW_08_task1
             
         }
 
-        protected override int CalculateSalary()
+        public override int CalculateSalary()
         {
             return Company.BaseSalary * Company.MiddleCoefficient;
         }
 
-        protected override string SetTItle()
+        public override string SetTItle()
         {
             return "Middle";
         }
 
-        protected override string[] SetResponsibilities()
+        public override string[] SetResponsibilities()
         {
             return Responsibilities.MiddleResponsibilities;
         }

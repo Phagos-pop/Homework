@@ -7,7 +7,7 @@ using HW_08_task1.Classes;
 
 namespace HW_08_task1
 {
-    sealed class ArchitectServise : JuniorServise
+    sealed class ArchitectServise : DeveloperServise
     {
 
         public ArchitectServise(string firstName, string lastName, int experience, string gitHub) : base(firstName, lastName, experience, gitHub)
@@ -15,17 +15,17 @@ namespace HW_08_task1
 
         }
 
-        protected override int CalculateSalary()
+        public override int CalculateSalary()
         {
             return Company.BaseSalary * Company.ArchitectCoefficient + Company.ArchitectPrize;
         }
 
-        protected override string SetTItle()
+        public override string SetTItle()
         {
             return "Architect";
         }
 
-        protected override string[] SetResponsibilities()
+         public override string[] SetResponsibilities()
         {
             return Responsibilities.ArchitectResponsibilities;
         }

@@ -9,7 +9,7 @@ namespace HW_08_task1.Sersvises
 {
     static class ListDeveloper
     {
-        static List<JuniorServise> Developers = new List<JuniorServise>();
+        static List<DeveloperServise> Developers = new List<DeveloperServise>();
         static List<JuniorServise> JuniorDevelopers = new List<JuniorServise>();
         static List<MiddleServise> MiddleDevelopers = new List<MiddleServise>();
         static List<SeniorServise> SeniorDevelopers = new List<SeniorServise>();
@@ -28,7 +28,7 @@ namespace HW_08_task1.Sersvises
         {
 
             MiddleServise middle = new MiddleServise(firstName, lastName, experience, gitHub);
-            JuniorDevelopers.Add(middle);
+            MiddleDevelopers.Add(middle);
 
         }
 
@@ -36,7 +36,7 @@ namespace HW_08_task1.Sersvises
         {
 
             SeniorServise senior = new SeniorServise(firstName, lastName, experience, gitHub);
-            JuniorDevelopers.Add(senior);
+            SeniorDevelopers.Add(senior);
 
         }
 
@@ -44,7 +44,7 @@ namespace HW_08_task1.Sersvises
         {
 
             TeamLeaderServise teamLeader = new TeamLeaderServise(firstName, lastName, experience, gitHub);
-            JuniorDevelopers.Add(teamLeader);
+            TeamLeaderDevelopers.Add(teamLeader);
 
         }
 
@@ -52,7 +52,7 @@ namespace HW_08_task1.Sersvises
         {
 
             ArchitectServise architect = new ArchitectServise(firstName, lastName, experience, gitHub);
-            JuniorDevelopers.Add(architect);
+            ArchitechDevelopers.Add(architect);
 
         }
 
@@ -64,7 +64,7 @@ namespace HW_08_task1.Sersvises
             Developers.AddRange(TeamLeaderDevelopers);
             Developers.AddRange(ArchitechDevelopers);
 
-            Developers = SortList(Developers).ToList<JuniorServise>();
+            Developers = SortList(Developers).ToList<DeveloperServise>();
 
             foreach (var i in Developers)
             {
@@ -75,7 +75,7 @@ namespace HW_08_task1.Sersvises
             
         }
 
-        static IOrderedEnumerable<JuniorServise> SortList(List<JuniorServise> Develop)
+        static IOrderedEnumerable<DeveloperServise> SortList(List<DeveloperServise> Develop)
         {
             var sortedUsers = Develop.OrderByDescending(u => u.Developer.Experience);
             return sortedUsers;
