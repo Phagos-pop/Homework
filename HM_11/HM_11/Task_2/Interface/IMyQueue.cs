@@ -8,7 +8,7 @@ namespace Task_2.Interface
 {
     interface IMyQueue
     {
-        virtual void Enqueue() { }
+        virtual void Enqueue() { }  
         object Dequeue();
         object Peek();
     }

@@ -20,7 +20,6 @@ namespace Task_2
             MyQueueObjectServise myQueueObject = new MyQueueObjectServise();
             Console.WriteLine(myQueueObject.Peek());
             myQueueObject.Enqueue(1);
-            myQueueObject.Enqueue(2);
             myQueueObject.Enqueue(3);
             Console.WriteLine(myQueueObject.Peek());
             Console.WriteLine(myQueueObject.Dequeue());
@@ -30,7 +29,6 @@ namespace Task_2
             MyQueueObjectServise myQueueObject2 = new MyQueueObjectServise();
             myQueueObject2.Enqueue(5);
             myQueueObject2.Enqueue(6);
-            myQueueObject2.Enqueue(7);
             Console.WriteLine(myQueueObject2.Peek()); 
             Console.WriteLine(myQueueObject2.Dequeue()); ;
 

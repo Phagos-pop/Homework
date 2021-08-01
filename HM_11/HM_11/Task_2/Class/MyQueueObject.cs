@@ -8,7 +8,7 @@ namespace Task_2.Class
 {
     class MyQueueObject
     {
-        public List<object> ObjectQueue = new List<object>();
+        public List<object> ObjectQueue = new List<object>();  
         public int Start { get; set; }
         public int End { get; set; }
     }

@@ -10,7 +10,7 @@ namespace Task_2.Servises
 {
     class MyQueueClassServise : IMyQueue
     {
-        MyQueueClass<MyQueueDateTimeServise> myQueue;
+        MyQueueClass<MyQueueDateTimeServise> myQueue;  
 
         public MyQueueClassServise()
         {

@@ -9,7 +9,7 @@ using Task_2.Interface;
 
 namespace Task_2.Servises
 {
-    class MyQueueObjectServise : IMyQueue
+    class MyQueueObjectServise : IMyQueue  
     {
         MyQueueObject myQueue;
 

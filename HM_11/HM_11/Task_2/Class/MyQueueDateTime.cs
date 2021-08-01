@@ -8,6 +8,6 @@ namespace Task_2.Class
 {
     class MyQueueDateTime
     {
-        public LinkedList<DateTime> DateTimeQueue = new LinkedList<DateTime>();
+        public LinkedList<DateTime> DateTimeQueue = new LinkedList<DateTime>();  
     }
 }
