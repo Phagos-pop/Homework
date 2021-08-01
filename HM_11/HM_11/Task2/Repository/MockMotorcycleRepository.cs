@@ -11,7 +11,7 @@ namespace Task2.Repository
 {
     class MockMotorcycleRepository : IRepository<Motorcycle>
     {
-        private List<Motorcycle> _motorcycles { get; set; } = new List<Motorcycle>();
+        private List<Motorcycle> _motorcycles { get; set; } = new List<Motorcycle>();  
         public void Create(Motorcycle moto)
         {
             if (!_motorcycles.Contains(moto))

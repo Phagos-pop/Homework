@@ -1,5 +1,6 @@
 ﻿using Serilog;
 using System;
+using Task1.Repository;
 using Task2.Models;
 using Task2.Repository;
 
@@ -10,12 +11,12 @@ namespace Task2
         static void Main(string[] args)
         {
             ProgramStart();
-            TestRepository(new MockMotorcycleRepository());
+            TestRepository(new MockMotorcycleRepository());  
             TestRepository(new MsSqlAdoMotorcycleRepository());
             TestRepository(new MsSqlEfMotorcycleRepository());
         }
 
-        private static void TestRepository(IMotorcycleRepository repository)
+        private static void TestRepository(IRepository<Motorcycle> repository)
         {
             var moto = new Motorcycle
             {
@@ -25,18 +26,18 @@ namespace Task2
                 Year = new DateTime(2000, 1, 1),
                 Odometre = 56000
             };
-            repository.CreateMotorcycle(moto);
+            repository.Create(moto);
 
-            var moto1 = repository.GetMotorcycles();
+            var moto1 = repository.GetObjects();
 
-            var moto2 = repository.GetMotorcycleById(moto.Id);
+            var moto2 = repository.GetById(moto.Id);
 
             moto.Name = "Yamaha";
-            repository.UpdateMotorcycle(moto);
-            var moto3 = repository.GetMotorcycleById(moto.Id);
-            repository.DeleteMotorcycle(moto);
+            repository.Update(moto);
+            var moto3 = repository.GetById(moto.Id);
+            repository.Delete(moto);
 
-            var moto4 = repository.GetMotorcycles();
+            var moto4 = repository.GetObjects();
         }
 
         private static void ProgramStart()

@@ -12,7 +12,7 @@ namespace Task2.Repository
     class MsSqlAdoMotorcycleRepository : IRepository<Motorcycle>
     {
         private readonly SqlConnection _connection;
-        public MsSqlAdoMotorcycleRepository()
+        public MsSqlAdoMotorcycleRepository()  
         {
             try
             {
