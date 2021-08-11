@@ -11,7 +11,7 @@ using Task2.Storage;
 namespace Task2.Repository
 {
     class MsSqlEfMotorcycleRepository : IRepository<Motorcycle>
-    {
+    {  
         private readonly MotorcycleContext _context; 
         public MsSqlEfMotorcycleRepository()
         {

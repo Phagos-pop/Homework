@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Task2.Models;
-using Task1.Repository;
 
 namespace Task2.Repository
 {

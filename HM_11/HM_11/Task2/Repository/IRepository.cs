@@ -9,7 +9,7 @@ namespace Task1.Repository
     interface IRepository<T>
     {
         T GetById(Guid id);
-        IEnumerable<T> GetObjects();
+        IEnumerable<T> GetObjects();  
         void Create(T moto);
         void Update(T moto);
         void Delete(T moto);

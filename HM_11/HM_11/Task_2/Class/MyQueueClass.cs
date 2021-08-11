@@ -8,6 +8,6 @@ namespace Task_2.Class
 {
     class MyQueueClass<T> where T : class
     {
-        public LinkedList<T> ClassQueue = new LinkedList<T>();
+        public LinkedList<T> ClassQueue = new LinkedList<T>();  
     }
 }

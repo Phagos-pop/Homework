@@ -10,7 +10,7 @@ namespace Task_2.Servises
 {
     class MyQueueDateTimeServise : IMyQueue
     {
-        MyQueueDateTime myQueue;
+        MyQueueDateTime myQueue;  
 
         public MyQueueDateTimeServise()
         {
